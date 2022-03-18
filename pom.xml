@@ -97,13 +97,13 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name>Instagram Release</name>
 	      <url>http://3.110.166.23:8082/Chethana/repository/Instagram-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <name>Instagram Snapshot</name>
 	      <url>http://3.110.166.23:8082/Chethana/repository/Instagram-Snapshot/</url>
 	    </snapshotRepository>
 	    
