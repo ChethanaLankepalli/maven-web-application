@@ -94,8 +94,6 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
-	    <!--
               <repository>
 	      <id>nexus</id>
 	      <name>Instagram Release</name>
@@ -107,7 +105,6 @@
 	      <name>Instagram Snapshot</name>
 	      <url>http://3.110.45.180:8082/Chethana/repository/Instagram-Snapshot/</url>
 	    </snapshotRepository>
--->
 	    
 	</distributionManagement>
 	
