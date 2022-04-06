@@ -97,13 +97,13 @@
               <repository>
 	      <id>nexus</id>
 	      <name>Instagram Release</name>
-	      <url>http://65.0.132.177:8082/repository/Instagram-Release/</url>
+	      <url>http://15.206.116.61:8082/repository/Instagram-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Instagram Snapshot</name>
-	      <url>http://65.0.132.177:8082/repository/Instagram-Snapshot/</url>
+	      <url>http://15.206.116.61:8082/repository/Instagram-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
