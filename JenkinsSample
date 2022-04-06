@@ -1,5 +1,8 @@
 node{
 def home = tool name: "maven3.8.5"
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: '']])
+
 //Git Hub Details
 stage('Checkout code')
 {
