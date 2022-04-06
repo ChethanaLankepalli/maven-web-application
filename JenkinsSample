@@ -1,0 +1,30 @@
+node{
+def home = tool name: "maven3.8.5"
+//Git Hub Details
+stage('Checkout code')
+{
+git branch: 'development', credentialsId: 'a5d1e599-4681-443c-b509-6b8f7fd0d7df', url: 'https://github.com/ChethanaLankepalli/maven-web-application'
+ }
+//Maven Builds
+stage('Build'){
+sh "$home/bin/mvn clean package"
+}
+
+//SonarQubeDetails
+stage('Sonar'){
+sh "$home/bin/mvn sonar:sonar"
+}
+
+//NexusDeploy
+stage('Deploy to Artifactory'){
+sh "$home/bin/mvn deploy"
+}
+ 
+//Deploy to Tomcat
+stage('Tomcat Deployment'){
+sshagent(['9b4474f5-0f5b-450b-b58b-a2c6ab6f1d37']){
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war 
+ec2-user@172.31.8.156:/opt/apache-tomcat-9.0.60/webapps"
+}
+}
+}
